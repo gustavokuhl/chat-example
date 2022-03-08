@@ -23,7 +23,7 @@
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
-      var socket = io();
+      var socket = io(location.href, { transports: ["websocket"] });
 
       var messages = document.getElementById('messages');
       var form = document.getElementById('form');
@@ -36,6 +36,16 @@
           input.value = '';
         }
       });
+
+      socket.on('connect', () => {
+	      messages.innerHTML = "";
+      });
+
+      socket.on('disconnect', () => {
+        var item = document.createElement('li');
+        item.textContent = "Desconectado...";
+        messages.appendChild(item);
+      })
 
       socket.on('chat message', function(msg) {
         var item = document.createElement('li');
