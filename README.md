@@ -1,15 +1,13 @@
-# chat-example
+# chat-example with Redis
 
 This is the source code for a very simple chat example used for
 the [Getting Started](http://socket.io/get-started/chat/) guide
 of the Socket.IO website.
 
-Please refer to it to learn how to run this application.
+Utilizei este exemplo para realizar testes de "pool" de sockets entre clusters.
 
-You can also spin up a free Heroku dyno to test it out:
+Com o Redis Adapter para o Socket.IO foi possível controlar sockets que estavam conectados a uma segunda instância.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/socketio/chat-example)
+## todo
 
-Or run it on [Repl.it](https://repl.it/):
-
-[![Run on Repl.it](https://repl.it/badge/github/socketio/chat-example)](https://repl.it/github/socketio/chat-example)
+Gravar GIF demonstrando a interação entre as instâncias.
